@@ -1,5 +1,5 @@
 
-#works with mbox-short.txt file
+#works with romeo.txt file
 fname = input("Enter file name: ")
 fh = open(fname)
 lst = list()
