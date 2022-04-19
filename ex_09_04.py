@@ -6,7 +6,8 @@ largestnum = None
 largestval = None
 for word in fh:
     if word.startswith('From '):
-        words = word.split()
+        wordss = word.rstrip()
+        words = wordss.split()
         nwords = words[1]
         lst.append(nwords)
 
