@@ -1,0 +1,31 @@
+
+
+
+
+
+***************************** Python for Everybody --> Using Python to Access Web Data --> WEEK5 - WEB SERVICES AND XML **********************************************
+
+import xml.etree.ElementTree as ET
+input = '''
+<stuf>
+    <users>
+        <user x ='2'>
+            <id>001</id>
+            <name>Bekzod</name>
+        </user>
+        <user x='7'>
+            <id>009</id>
+            <name>Sherzod</name>
+        </user>
+    </users>
+</stuf> '''
+
+stuff = ET.fromstring(input)
+lst = stuff.findall('users/user')
+print('User count:', len(lst))
+for item in lst:
+    print('Name', item.find('name').text)
+    print('ID', item.find('id').text)
+    print('Attribute', item.get('x'))
+
+*****************************WEEK5 - WEB SERVICES AND XML*******************************************************************
